@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
@@ -32,8 +32,8 @@ yarn-error.log*
 /coverage
 
 # production
-/build
-/dist
+# /build
+# /dist
 
 # misc
 .DS_Store
@@ -54,8 +54,8 @@ yarn-error.log*
 /coverage
 
 # production
-/build
-/dist
+# /build
+# /dist
 
 # misc
 .DS_Store
