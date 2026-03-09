@@ -27,9 +27,13 @@ exports.createUser=async(req,res)=>{
         //   });        
         // })
     }
+    // catch(err){
+    //     res.status(400).json(doc);        
+    // }
     catch(err){
-        res.status(400).json(doc);        
-    }
+    res.status(400).json({ error: err.message });
+}
+
 };
 
 exports.loginUser=async (req,res)=>{
