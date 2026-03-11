@@ -49,7 +49,7 @@ exports.checkAuth=async (req,res)=>{
         res.json(req.user);
     }
     else{
-        res.sendStauts(401)
+        res.sendStatus(401)
     }
 };
 
