@@ -49,28 +49,8 @@ exports.checkAuth=async (req,res)=>{
         res.json(req.user);
     }
     else{
-        res.sendStatus(401)
+        res.sendStauts(401)
     }
-};
-
-
-// logut functionality
-exports.logoutUser = async (req, res) => {
-  // Clear the JWT cookie
-  res.cookie('jwt', '', {
-    expires: new Date(0), // Expire immediately
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict'
-  });
-  
-  // Destroy session if using passport session
-  req.logout((err) => {
-    if (err) {
-      return res.status(500).json({ error: 'Logout failed' });
-    }
-    res.status(200).json({ message: 'Logged out successfully' });
-  });
 };
 
 
