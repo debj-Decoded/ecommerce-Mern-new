@@ -113,8 +113,6 @@ passport.deserializeUser(function (user, cb) {
 
 
 server.use(cors({
-  origin: 'https://ecommerce-mern-new-7rh8.vercel.app',
-  credentials: true,
   exposedHeaders: ['X-Total-Count']
 }))
 server.use(express.json())//to parse req.body
